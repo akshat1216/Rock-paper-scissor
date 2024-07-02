@@ -35,6 +35,37 @@
         }
         //console.log(getHumanChoice());
 
+        let humanScore = 0;
+        let computerScore = 0;
+
+        function playRound(humanChoice,computerChoice)
+        {
+            if(humanChoice == computerChoice)
+            {
+                console.log("DRAW!");
+            }
+            if((humanChoice == "ROCK" && computerChoice == "SCISSORS")||
+               (humanChoice == "PAPER" && computerChoice =="ROCK")||
+               (humanChoice == "SCISSORS" && computerChoice == "PAPER"))
+               {
+                  console.log(`You Win! ${humanChoice} beats ${computerChoice}.`);
+                  humanScore += 1;
+               }
+            else if((humanChoice == "SCISSORS" && computerChoice == "ROCK")||
+                    (humanChoice == "ROCK" && computerChoice =="PAPER")||
+                    (humanChoice == "PAPER" && computerChoice == "SCISSORS"))
+                    {
+                        console.log(`Computer Wins! ${humanChoice} beats ${computerChoice}.`);
+                        computerScore += 1;
+                    }
+
+        }
+        let humanSelection = getHumanChoice();
+        let computerSelection = getComputerChoice();
+
+        playRound(humanSelection,computerSelection);
+
+
    </script> 
 </body>
 </html>
