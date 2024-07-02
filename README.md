@@ -1,1 +1,1 @@
-# Rock-paper-scissor
+Creating a classic rock paper scissors game using HTML and Javascipt.

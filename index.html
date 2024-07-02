@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissor</title>
+</head>
+
+<body>
+   <script>
+        function getComputerChoice()
+        {
+            let rps = Math.floor(Math.random()*3);
+            if(rps == 0)
+            {
+                return "ROCK";
+            }
+            else if(rps == 1)
+            {
+                return "PAPER";
+            }
+            else if(rps == 2)
+            {
+                return "SCISSOR";
+            }
+            
+        }
+        //console.log(getComputerChoice());
+
+        function getHumanChoice()
+        {
+            let userc = prompt("ROCK, PAPER or SCISSORS?");
+            return userc.toUpperCase();
+        }
+        //console.log(getHumanChoice());
+
+   </script> 
+</body>
+</html>
