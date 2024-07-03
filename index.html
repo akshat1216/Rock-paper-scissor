@@ -30,7 +30,9 @@
             return userc;
         }
 
-        function playGame() {
+        function playGame()
+        {   
+            const bo = parseInt(prompt("Play best of? (3/5/7)"));
             let humanScore = 0;
             let computerScore = 0;
 
@@ -40,20 +42,38 @@
                 } else if ((humanChoice == "ROCK" && computerChoice == "SCISSORS") ||
                            (humanChoice == "PAPER" && computerChoice == "ROCK") ||
                            (humanChoice == "SCISSORS" && computerChoice == "PAPER")) {
-                    console.log(`You Win! ${humanChoice} beats ${computerChoice}.`);
+                    console.log(`${humanChoice} beats ${computerChoice}.`);
                     humanScore += 1;
                 } else {
-                    console.log(`Computer Wins! ${computerChoice} beats ${humanChoice}.`);
+                    console.log(`${computerChoice} beats ${humanChoice}.`);
                     computerScore += 1;
                 }
             }
-            for(let i=0;i<5;i++)
+            
+            for(let i=0;i<bo;i++)
             {
                 playRound();
+            }
+
+            if(humanScore==computerScore)
+            {
+                console.log("Tie!");
+                console.log(`${humanScore} : ${computerScore}`);
+            }
+            else if(humanScore>computerScore)
+            {
+                console.log("You Win!");
+                console.log(`${humanScore} : ${computerScore}`);
+            }
+            else if(humanScore<computerScore)
+            {
+                console.log("Computer Wins!")
+                console.log(`${humanScore} : ${computerScore}`);
             }
         }
 
         playGame();
+       
    </script> 
 </body>
 </html>
